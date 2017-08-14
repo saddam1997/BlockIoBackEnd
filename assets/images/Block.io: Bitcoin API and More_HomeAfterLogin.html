@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients no-cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Block.io: Bitcoin API and More</title>
+    
+    <meta charset="utf-8">
+    <meta name="author" value="Block.io">
+    <meta content="on" http-equiv="cleartype">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://block.io/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://block.io/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://block.io/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://block.io/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="https://block.io/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://block.io/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="https://block.io/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://block.io/apple-touch-icon-152x152.png">
+    <link rel="icon" type="image/png" href="https://block.io/favicon-196x196.png" sizes="196x196">
+    <link rel="icon" type="image/png" href="https://block.io/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="https://block.io/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="https://block.io/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="https://block.io/favicon-128.png" sizes="128x128">
+    <link rel="shortcut icon" type="image/png" href="https://block.io/favicon.ico">
+    <meta name="application-name" content="Block.io">
+    <meta name="msapplication-TileColor" content="#FFFFFF">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x150.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x310.png">
+    
+    <link rel="stylesheet" type="text/css" media="screen" href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/reset.css">
+    <link href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/fira.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/css.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/screen-base.css">
+    <link rel="stylesheet" href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/prism.css">
+    <link media="screen and (min-width: 0em) and (max-width: 43.6875em)" href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/small.css" rel="stylesheet">
+    <link media="screen and (min-width: 43.75em) and (max-width: 64.9375em)" href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/medium.css" rel="stylesheet">
+    <link media="screen and (min-width: 65em)" href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/large.css" rel="stylesheet">
+    
+    <!-- JPList -->
+    <link href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jplist-core.css" rel="stylesheet" type="text/css">
+    <link href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jplist-filter-toggle-bundle.css" rel="stylesheet" type="text/css">
+    <link href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jplist-pagination-bundle.css" rel="stylesheet" type="text/css">
+    <link href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jplist-textbox-control.css" rel="stylesheet" type="text/css">
+    <!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+    
+    <link href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/readable-bootstrap.css" rel="stylesheet">
+    <link href="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/blockio.css" rel="stylesheet">
+
+
+    <meta content="authenticity_token" name="csrf-param">
+<meta content="NZzkE3qthMm2aGdzg9geFNfgHBFNQvF5p8pmVF4hpgc=" name="csrf-token">
+  </head>
+  <body id="top" class="" style="">
+    <header id="page-header">
+      <nav class="container">
+	<p class="col first sm-col-03">
+	  <a href="https://block.io/"><img src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/blockio-icon-white.svg" class="logo"></a>
+	</p>
+	<ul class="col sm-col-03 right last">
+	  <li class="nav-security">
+	    <a href="https://block.io/security">Security</a>
+	  </li>
+	  <li class="nav-support">
+	    <a href="https://block.io/contacts">Support</a>
+	  </li>
+	  <li class="nav-developers">
+	    <a href="https://block.io/docs">For Developers</a>
+	  </li>
+	  <li class="nav-login">
+	    <a href="#" class="logoutlink">Logout</a>
+	    <form action="/users/sign_out" method="post" id="signerout" novalidate="novalidate">
+	      <input name="authenticity_token" value="NZzkE3qthMm2aGdzg9geFNfgHBFNQvF5p8pmVF4hpgc=" type="hidden">
+	    </form>
+	  </li>
+	  <li class="nav-sign-up">
+	    <a href="https://block.io/dashboard">Wallet</a>
+	  </li>
+	</ul>
+      </nav>
+    </header>
+    
+    
+
+    
+    <div>
+      <!-- if (Modernizr.webworkers) -->
+
+
+<div id="modalApiKeys" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content dash-font-size">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Your API Keys</h4>
+            </div>
+            <div class="modal-body text-center">
+	      <table class="table table-hover">
+	        <tbody><tr><th class="text-right" style="padding-right: 15px; border-top: 0px;">Litecoin</th><td class="text-left" style="border-top: 0px;"><kbd>0e6c-84e3-326e-50af</kbd></td></tr>
+	        <tr><th class="text-right" style="padding-right: 15px; border-top: 0px;">Bitcoin</th><td class="text-left" style="border-top: 0px;"><kbd>c2ee-27bd-dd34-96fa</kbd></td></tr>
+	        <tr><th class="text-right" style="padding-right: 15px; border-top: 0px;">Dogecoin</th><td class="text-left" style="border-top: 0px;"><kbd>cae6-4f74-99c0-6f4c</kbd></td></tr>
+	        <tr><th class="text-right" style="padding-right: 15px; border-top: 0px;">Litecoin (TESTNET!)</th><td class="text-left" style="border-top: 0px;"><kbd>a3f1-b1dd-b94a-2469</kbd></td></tr>
+	        <tr><th class="text-right" style="padding-right: 15px; border-top: 0px;">Bitcoin (TESTNET!)</th><td class="text-left" style="border-top: 0px;"><kbd>b916-3113-9353-e7e8</kbd></td></tr>
+	        <tr><th class="text-right" style="padding-right: 15px; border-top: 0px;">Dogecoin (TESTNET!)</th><td class="text-left" style="border-top: 0px;"><kbd>ecc1-46be-983a-ebc4</kbd></td></tr>
+	      </tbody></table>
+
+	      <p class="text-left">You can use your API keys to integrate 
+Block.io functionality in your web/phone applications, to accept 
+payments, to create applications with built-in tipping, etc. Try out our
+ <a href="https://block.io/api/simple" target="_blank" rel="noreferrer">interactive API documents</a> to play around with our API.</p>
+            </div>
+            <div class="modal-footer">
+	      <p class="text-muted text-left">Confused about something? <a href="https://block.io/contacts" target="_blank" rel="noreferrer">Contact us</a>, we're happy to help.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<div id="modalTestnetDesc" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">What are Testnets?</h4>
+            </div>
+            <div class="modal-body text-left">
+	      <p>Testnets exist for every coin, such as Bitcoin, Litecoin, and 
+Dogecoin. They are, however, completely separate from the main networks,
+ where currency holds real monetary value.</p>
+	      <p>Testnets have their own separate addresses, and coins. A 
+Bitcoin Testnet coin, for example, cannot be transferred to a Bitcoin 
+address. Testnet coins have no value, and are not traded for money like 
+Bitcoin, Litecoin, and Dogecoin are. Payments are never made in Testnet 
+coins.</p>
+	      <p>Testnets exist for the sole purpose of testing applications 
+while using coins that do not hold monetary value. They are meant for 
+developers to debug their implementations in a safe, sandbox 
+environment, so that if developers make mistakes, these mistakes are not
+ costly. Contrast this with making mistakes (such as transferring the 
+wrong amount of coins to a destination address) on the main network, 
+where every mistake costs you real money.</p>
+	      <p>Block.io provides you 3 different Testnets, one for each main 
+network (Bitcoin, Litecoin, and Dogecoin). We provide you with Testnet 
+coins so you can test your implementations in a sandbox environment.</p>
+            </div>
+            <div class="modal-footer">
+	      <p class="text-muted text-left">Confused about something? <a href="https://block.io/contacts" target="_blank" rel="noreferrer">Contact us</a>, we're happy to help.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div id="modalIntro" class="modal fade" style="display: none;" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Welcome to Block.io!</h4>
+            </div>
+            <div class="modal-body text-left">
+
+	      <p><strong>Success!</strong> You now have access to your secure, multi-currency Wallet.</p>
+	      <p>So, what's next?</p>
+
+	      <p><strong>Use Block.io as a Wallet</strong>: We provide you easy
+ access to Bitcoin, Dogecoin, and Litecoin through our secure wallet. Go
+ ahead, deposit some coins into it and try it out. You can buy coins at 
+exchanges such as <em>Kraken</em>, and <em>Cryptsy</em>.</p>
+	      <p><strong>Use Block.io in Apps</strong>: You can now build your 
+own wallets, tipping bots, voting systems, etc. using our fast, secure 
+API. You have complete access to this API. Go ahead, play with our API 
+through our <a href="https://block.io/api/simple" target="_blank" rel="noreferrer">Interactive Documents</a>!</p>
+	      <p><strong>Use Block.io to Accept Payments</strong>: Using our 
+secure API, you can create wallet addresses instantly, check their 
+balances, and withdraw coins from them whenever you want. <em>More merchant support coming soon!</em></p>
+	    </div>
+	    
+            <div class="modal-footer">
+	      <button type="button" class="btn btn-info btn-md" data-dismiss="modal">Awesome</button>
+            </div>
+	</div>
+    </div>
+</div>
+
+
+<span id="firsttime" class="hidden"></span>
+
+<div style="margin: 0 auto;">
+
+
+  <div id="bitcoin_news_widget_s_line" class="hidden-xs" style="margin-bottom: 15px;"></div>
+
+</div>
+
+
+  <ul class="nav nav-pills nav-tabs" role="tablist" style="margin: 0 auto; margin-bottom: 25px; border-bottom: 0px; max-width: 1000px; margin-top: 25px; padding-left: 10px; padding-right: 10px;">
+    <li class="active"><a href="https://block.io/dashboard/btc"><span class="visible-md visible-lg">Bitcoin (<img src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/Bitcoin.png" width="25/">)</span><span class="visible-sm visible-xs"><img src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/Bitcoin.png" width="25/"></span></a></li>
+    <li class=""><a href="https://block.io/dashboard/doge"><span class="visible-md visible-lg">Dogecoin (<img src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/Dogecoin.png" width="25/">)</span><span class="visible-sm visible-xs"><img src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/Dogecoin.png" width="25/"></span></a></li>
+    <li class=""><a href="https://block.io/dashboard/ltc"><span class="visible-md visible-lg">Litecoin (<img src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/Litecoin.png" width="25/">)</span><span class="visible-sm visible-xs"><img src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/Litecoin.png" width="25/"></span></a></li>
+    <li class="dropdown  hidden-xs">
+      <a data-toggle="dropdown" class="dropdown-toggle" type="button">Testnets <b class="caret"></b></a>
+      <ul class="dropdown-menu">
+	<li><a href="#" id="modalTestnets">What's a Testnet?</a></li>
+	<li class="divider"></li>
+	<li><a href="https://block.io/dashboard/btctest">Bitcoin (Testnet!)</a></li>
+	<li><a href="https://block.io/dashboard/dogetest">Dogecoin (Testnet!)</a></li>
+	<li><a href="https://block.io/dashboard/ltctest">Litecoin (Testnet!)</a></li>
+      </ul>
+    </li>
+    <li class="pull-right">
+      <a href="https://block.io/dashboard/settings" class="btn btn-lg btn-default"><span class="fa fa-cog visible-sm visible-xs"></span><span class="visible-md visible-lg">Settings</span></a>
+    </li>
+    <li class="pull-right">
+      <a href="#" class="btn btn-lg btn-default " id="modalAKs"><span class="text-danger visible-md visible-lg"><strong>Show API Keys</strong></span><span class="fa fa-tasks visible-xs visible-sm"></span></a>
+    </li>
+  </ul>
+
+
+
+<span id="curApiKey" class="notranslate hidden" translate="no">c2ee-27bd-dd34-96fa</span>
+<span id="minConfirmations" class="notranslate hidden" translate="no">3</span>
+<span id="curPrecision" class="notranslate hidden" translate="no">5</span>
+
+
+
+
+<div id="modalCreateAddressbtc" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content dash-font-size">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Create Wallet Address</h4>
+            </div>
+	    <form action="/dashboard/btc" method="post" id="createAddressFormbtc" class="modal-form" novalidate="novalidate">
+              <div class="modal-body text-center">
+		
+		<p class="hidden-xs">This will create a random Bitcoin wallet address.</p>
+		<p class="visible-xs">Create a Bitcoin wallet address.</p>
+		<input name="authenticity_token" value="NZzkE3qthMm2aGdzg9geFNfgHBFNQvF5p8pmVF4hpgc=" type="hidden">
+		<input value="true" name="get_new_address" type="hidden">
+		<input value="c2ee-27bd-dd34-96fa" name="api_key" type="hidden">
+		<input name="label" class="form-control" placeholder="Optional label, examples: myhomewallet, pocketmoney, savings, ..." autocomplete="off" type="text">
+		
+              </div>
+	      <div class="modal-footer">
+		<p class="text-muted">Labels are <strong>not</strong> wallet addresses.<span class="hidden-xs"> Leave blank if unsure.</span></p>
+		<button type="button" class="btn btn-md btn-default" data-dismiss="modal">Cancel</button>
+		<button type="submit" class="btn btn-md btn-success" id="createAddressSubmitbtc">Create</button>
+	      </div>
+	    </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+<div id="modalWithdrawAmountbtc" class="modal fade dash-font-size" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content dash-font-size">
+            <div class="modal-header">
+              <h4 class="modal-title">Send Bitcoin</h4>
+            </div>
+	    <form action="/dashboard/btc" method="post" id="withdrawAmountFormbtc" class="modal-form" autocomplete="off" novalidate="novalidate">
+              <div class="modal-body text-center">
+		<h1 class="break-word" style="margin-bottom: 25px;"><span id="withdraw-bal-available">0.00000</span> ฿<br><small>Available Balance</small></h1>
+		
+		<p id="withdraw-from" class="text-muted"></p>
+
+		<div class="douchebag_safari" style="left: -9999px; position: fixed; width: 1px;">
+		  <input type="password">
+		  <input type="text">
+		  <input type="text">
+		</div>
+
+		<input name="authenticity_token" value="NZzkE3qthMm2aGdzg9geFNfgHBFNQvF5p8pmVF4hpgc=" type="hidden">
+		<input value="true" name="withdraw_amount" type="hidden">
+		<input value="c2ee-27bd-dd34-96fa" name="api_key" type="hidden">
+		<input value="" name="from_user_ids" id="from_user_ids_btc" type="hidden">
+		<input step="any" name="npzicaoqyktobye_kyq" placeholder="Amount of Bitcoin to send..." required="required" class="form-control" autocomplete="off" aria-required="true" type="number" lang="en">
+		<input name="xpnzcottbswsbswgpw" class="form-control" placeholder="Destination Bitcoin address" required="required" autocomplete="off" aria-required="true" type="text">
+		
+		<input value="" name="goiaesworgzentslw" class="form-control" placeholder="Secret PIN" required="required" autocomplete="off" aria-required="true" type="password">
+		
+		<select class="form-control notranslate poptip" id="priority_selector" data-toggle="tooltip" title="" data-original-title="Higher priority means faster confirmation during high network load. Recommended priority is marked with a *.">
+		  <option value="low">Priority: Low</option>
+		  <option value="medium" selected="selected">Priority: Medium*</option>
+		  <option value="high">Priority: High</option>
+		</select>
+
+              </div>
+	      <div class="modal-footer text-left">
+		<p><span class="text-bold text-muted">Minimum Network Fee (per Kb)</span>: <span id="network_fee_display" class="text-warning">0.00342</span> <span class="text-muted">฿;</span><br>
+		  Actual network fees depend on the size of your transaction.</p>
+		
+		<span class="payment_address_id" style="display: none;">xpnzcottbswsbswgpw</span>
+		<span class="amount_id" style="display: none;">npzicaoqyktobye_kyq</span>
+		<span class="pin_current_id" style="display: none;">goiaesworgzentslw</span>
+
+		<button type="button" class="btn btn-md btn-default" data-dismiss="modal" id="withdrawCancelButton">Cancel</button>
+		<button type="button" class="btn btn-md btn-success" id="withdrawalButton"><i class="fa fa-spinner fa-md hidden" id="withdrawSpinner"></i> <span id="withdrawSpinlabel">Send ฿</span></button>
+	      </div>
+	    </form>
+        </div>
+    </div>
+</div>
+
+<span id="withdraw-from-def" class="hidden notranslate"></span>
+<span id="from-user-ids-def" class="hidden notranslate"></span>
+<span id="withdraw-bal-available-def" class="hidden notranslate"></span>
+
+<span id="coin-symbol" class="hidden notranslate">฿</span>
+<span id="min-withdrawal-limit" class="hidden notranslate">0.00010</span>
+<span id="max-withdrawal-limit" class="hidden notranslate">50000.00000</span>
+<span id="estimated-network-fee" class="hidden notranslate">0.00342</span>
+<span id="precision" class="hidden notranslate">5</span>
+<span id="coin-name" class="hidden notranslate">Bitcoin</span>
+
+<span id="priority" class="hidden notranslate">medium</span>
+
+<span id="priority_low" class="hidden notranslate">0.00324</span>
+<span id="priority_medium" class="hidden notranslate">0.00342</span>
+<span id="priority_high" class="hidden notranslate">0.00400</span>
+
+
+
+<div id="modalDepositbtc" class="modal fade dash-font-size">
+    <div class="modal-dialog">
+        <div class="modal-content dash-font-size">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">Deposit Bitcoin</h4>
+            </div>
+            <div class="modal-body text-center">
+
+	      <div style="margin-bottom: 10px;">
+		<kbd class="deposit-address break-word hidden-md hidden-lg selectable-plain"></kbd>
+		<h4 class="deposit-address break-word hidden-xs hidden-sm"></h4>
+	      </div>
+
+	      <div id="qrcodeDiv"> </div>
+	      
+	      <p>You can send Bitcoin to the above address.</p>
+	      <p class="text-muted"><i class="text-info fa fa-info-circle poptip" data-placement="right" data-toggle="tooltip" title="" data-original-title="This is a MultiSig address. If the sending service/wallet says this address is incorrect, that service/wallet does not support MultiSig addresses, and is most likely outdated and insecure."></i> Address is invalid?</p>
+	    </div>
+
+            <div class="modal-footer">
+	      <p class="text-muted text-left">Confused about something? <a href="https://block.io/contacts" target="_blank" rel="noreferrer">Contact us</a>, we're happy to help.</p>
+	      <button class="btn btn-default btn-md" data-dismiss="modal">Cancel</button>
+	      <button class="btn btn-info btn-md reloadbutton">Done</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<span id="outer-deposit-address" style="display: none;">asdasd</span>
+
+
+
+<div id="modalPfbtc" class="modal fade dash-font-size">
+    <div class="modal-dialog">
+        <div class="modal-content dash-font-size">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h5 class="modal-title">New Forwarding Address</h5>
+            </div>
+            <div class="modal-body text-center">
+
+	      <div style="margin-bottom: 25px;">
+		<div id="pf-actual-body" class="hidden text-left" style="margin-left: 15px; margin-right: 15px;">
+		  <div style="margin-bottom: 10px;">
+
+		    <div class="text-center">
+		      <h6>Forwarding Address</h6>
+		    <kbd class="pf-forwarding-address break-word hidden-md hidden-lg selectable-plain"></kbd>
+		    <h4 class="pf-forwarding-address break-word hidden-xs hidden-sm"></h4>
+
+		      <div id="pfQrcodeDiv" style="margin-top: 15px;"> </div>
+		    </div>
+
+		    <h6>Private Key (Please Backup -- <i class="fa fa-warning text-danger poptip" data-toggle="tooltip" title="" data-original-title="Please write this Private Key down as a backup. You will not see this private key again for security reasons."></i>)</h6>
+		    <span class="pf-forwarding-private-key small break-word" style="font-weight: fixed;"></span>
+
+		    <p style="margin-top: 15px;">Funds sent to the above address are forwarded to your Bitcoin Wallet address labeled <span class="pf-to-label" style="font-weight: bold;"></span>.
+		      <span class="pf-to-address hidden"></span>		      
+		    </p>
+		    
+		  </div>
+		  
+		</div>
+		
+	      </div>
+	      
+	      <div id="pf-warning-body" class="text-center" style="margin-left: 15px; margin-right: 15px;">
+		
+		<h4><i class="fa fa-warning text-warning"></i> Security Warning</h4>
+		
+		<p class="text-left small"><em>Forwarding Addresses</em> are useful if
+ the sender thinks your Block.io wallet address is invalid. Block.io 
+uses Multi Signature addresses, and some wallets/sites do not yet 
+recognize this new standard. In contrast, Forwarding Addresses are 
+Single Signature addresses, and recognized globally by sites that deal 
+in Bitcoin.</p>
+
+		<p class="text-left small">By using a Forwarding Address, <strong>you are asking</strong> Block.io to <em>forward</em> funds from it to your Block.io Wallet. The new forwarding address is <em>not</em> a part of your Wallet, and is only a <em>proxy</em> to your Wallet.
+
+		  </p><p class="text-left small">You will have the private key to 
+access this address on your own if you wish. Block.io will also need 
+this private key to forward funds to your Wallet. This means <em>Block.io will have access</em>
+ to funds in this forwarding address alongside yourself, and you will 
+not have solitary control of your own funds until they are transferred 
+to your Wallet from the <em>forwarding address</em>.</p>
+
+		<p class="text-left small">If you agree, please proceed to see your new Forwarding Address below.</p>
+		<button class="btn btn-xs btn-danger" data-dismiss="modal">Cancel</button>
+		<button class="btn btn-xs btn-info" id="pf-understand-button">I Understand, and Agree</button>
+		
+	      </div>
+	      
+	    </div>
+
+            <div class="modal-footer">
+	      <p class="text-muted small text-left">Forwarding of funds to your Wallet will incur a Network Fee of 0.00020 ฿.</p>
+	    </div>
+	</div>
+    </div>
+</div>
+
+
+<div id="sweepAddressModal" class="modal fade dash-font-size" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+        <div class="modal-content dash-font-size">
+            <div class="modal-header">
+              <h4 class="modal-title">Sweep Bitcoin Into Block.io</h4>
+            </div>
+	    <form action="/dashboard/btc" method="post" id="sweepAddressForm" class="modal-form" autocomplete="off" novalidate="novalidate">
+              <div class="modal-body text-center">
+		<h1 class="break-word" style="margin-bottom: 25px;"><span id="sweep-bal-available">0.00000</span> ฿<br><small>Sweepable Balance</small></h1>
+		
+		<p id="sweep-from" class="text-muted"></p>
+
+		<div class="douchebag_safari" style="left: -9999px; position: fixed; width: 1px;">
+		  <input type="password">
+		  <input type="text">
+		  <input type="text">
+		</div>
+
+		<input name="authenticity_token" value="NZzkE3qthMm2aGdzg9geFNfgHBFNQvF5p8pmVF4hpgc=" type="hidden">
+		<input value="c2ee-27bd-dd34-96fa" name="api_key" type="hidden">
+		<input name="azgavdtlwg_wradog" class="form-control" placeholder="Private Key for a Bitcoin Address" required="required" autocomplete="off" aria-required="true" type="text">
+		
+              </div>
+	      <div class="modal-footer text-left">
+		<p class="text-muted"><span class="text-bold">Minimum Network Fee</span>: 0.00020 ฿.<br>
+		  Actual network fees depend on the size of your transaction.</p>
+		
+		<span class="sweep_wif_id" style="display: none;">azgavdtlwg_wradog</span>
+
+		<button type="button" class="btn btn-md btn-default" data-dismiss="modal" id="sweepCancelButton">Cancel</button>
+		<button type="button" class="btn btn-md btn-success disabled" id="sweepFinalButton"><i class="fa fa-spinner fa-md hidden" id="sweepSpinner"></i> <span id="sweepSpinlabel">Sweep ฿ Into My Wallet</span></button>
+	      </div>
+	    </form>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container" style="margin: 0 auto;">
+  <div class="row" style="margin-bottom: 25px;">
+  
+    <span class="currency_symbol notranslate hidden" translate="no">฿</span>
+    <span class="cur_network notranslate hidden" translate="no">btc</span>
+    
+    <div class="row" style="margin-bottom: 25px;">
+      
+      <div class="col-md-4 col-md-offset-3 col-sm-4 col-sm-offset-2 col-xs-offset-2 col-xs-10">
+	<h2>0.00000 ฿<br><small>Balance
+	</small></h2>
+      </div>
+      
+      <div class="col-md-3 col-md-offset-0 col-sm-6 col-xs-offset-2 col-xs-10">
+	<h2 class="poptip" data-toggle="tooltip" title="" data-original-title="Block.io requires 3 network confirmations for Bitcoin sent by non-Block.io addresses."><span class="text-muted">0.00000 ฿</span><br><small>Pending Rec'd</small></h2>
+      </div>
+    </div>
+    
+    <div class="row text-center">
+      
+      <div class="col-md-1 col-md-offset-3 col-xs-2 col-xs-offset-2 poptip" data-toggle="tooltip" title="" data-original-title="Send ฿ to anyone.">
+	<span class="available_balance notranslate hidden" translate="no">0.00000</span>
+	<span class="from_user_ids notranslate hidden" translate="no"></span>
+	<span class="withdraw_from notranslate hidden" translate="no"></span>
+	
+	<button class="btn btn-lg btn-default btn-responsive poptip disabled withdrawbutton" data-original-title="" title=""><i class="fa fa-send-o text-success fa-fw"></i></button>
+      </div>
+      
+      <div class="col-md-2 col-xs-2 text-left">
+	<span class="outer_deposit_address notranslate hidden" translate="no">37i4kBZBDguWmtBApqzx8qRgV1PRXDRHsj</span>
+	<button class="btn btn-lg btn-default btn-responsive poptip depositbutton" title="" data-toggle="tooltip" data-original-title="Deposit ฿ into your Block.io account"><i class="fa fa-qrcode text-primary fa-fw"></i></button>
+      </div>
+      
+      <div class="col-md-1 col-xs-2 col-md-offset-1">
+	<button class="btn btn-lg btn-default btn-responsive poptip createaddressbutton" title="" data-toggle="tooltip" data-original-title="Create a New Address"><i class="fa fa-plus-square-o fa-fw"></i></button>
+      </div>
+      
+      <div class="col-md-1 col-xs-2">
+	<button class="btn btn-lg btn-responsive btn-default poptip sweepaddressbutton" title="" data-toggle="tooltip" data-original-title="Sweep Coins from an External Wallet Address"><i class="fa fa-fw fa-external-link fa-rotate-90"></i></button>
+      </div>
+      
+      <div class="col-md-1 col-xs-2">
+	<div class="poptip" data-toggle="tooltip" title="" data-original-title="Go to Archived Addresses">
+	  <a class="btn btn-responsive btn-lg btn-default disabled" href="https://block.io/dashboard/btc/archived"><i class="fa fa-angle-double-right fa-fw"></i></a>
+	</div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="box" style="margin-bottom: 50px;">
+    <div class="center">
+      
+      <div class="box text-shadow">
+        
+        <div id="jplist-addrs" class="box jplist">
+	  
+	  <!-- ios button: show/hide panel -->
+	  <div class="jplist-ios-button" style="margin-bottom: 15px;">
+	    <i class="fa fa-sort"></i>
+	    Menu
+	  </div>
+	  
+	  <!-- panel -->
+	  <div class="jplist-panel box panel-top right">
+	    
+	    <!-- items per page dropdown -->
+	    <div class="jplist-drop-down hidden" data-control-type="items-per-page-drop-down" data-control-name="paging" data-control-action="paging"><div class="jplist-dd-panel"> 10 per page </div>
+	      
+	      <ul style="display: none;">
+		<li class=""><span data-number="3"> 3 per page </span></li>
+		<li><span data-number="5"> 5 per page </span></li>
+		<li class="active"><span data-number="10" data-default="true"> 10 per page </span></li>
+		<li><span data-number="all"> View All </span></li>
+	      </ul>
+	    </div>
+	    
+	    <!-- sort dropdown -->
+	    <div class="jplist-drop-down dash-font-size" data-control-type="sort-drop-down" data-control-name="sort" data-control-action="sort" data-datetime-format="{month}/{day}/{year}" style="margin-bottom: 10px;"><div class="jplist-dd-panel">Sort by</div> <!-- {year}, {month}, {day}, {hour}, {min}, {sec} -->
+	      
+	      <ul style="display: none;">
+		<li class="active"><span data-path="default">Sort by</span></li>
+		<li><span data-path=".title" data-order="asc" data-type="number">Created<i class="fa fa-arrow-down"></i></span></li>
+		<li><span data-path=".title" data-order="desc" data-type="number">Created<i class="fa fa-arrow-up"></i></span></li>
+		<li><span data-path=".available_balance_index" data-order="asc" data-type="text">Balance<i class="fa fa-arrow-down"></i></span></li>
+		<li><span data-path=".available_balance_index" data-order="desc" data-type="text">Balance<i class="fa fa-arrow-up"></i></span></li>
+	      </ul>
+	    </div>
+	    
+	    <!-- filter by title -->
+	    <div class="text-filter-box" style="margin-bottom: 15px;">
+	      
+	      <i class="fa fa-search jplist-icon"></i>
+	      
+	      <!--[if lt IE 10]>
+		  <div class="jplist-label">Filter by Title:</div>
+		  <![endif]-->
+	      
+	      <input data-path=".addrlabel" placeholder="Filter by Label" data-control-type="textbox" data-control-name="title-filter" data-control-action="filter" style="font-size: 0.8em;" type="text">
+	    </div>
+	    
+	  </div>
+	  
+	  <!-- data -->   
+	  <div class="list box text-shadow address-container">
+	    
+	    
+	    
+	    
+	    
+          <div class="list-item box row address-row dash-font-size">
+	      <div class="col-sm-12 col-md-12 text-left top-bottom-padding-5">
+		
+		<span class="col-xs-3 col-sm-1 col-md-1 title text-left" style="padding-top: 10px;">0.</span>
+		
+		<span class="col-xs-9 col-sm-3 col-md-2 addrlabel text-left notranslate poptip" style="word-wrap: break-word; padding-top: 10px;" data-toggle="tooltip" title="" data-original-title="Label">default</span>
+		<span class="col-xs-12 col-sm-8 col-md-4 address text-left notranslate top-bottom-padding-10"><div data-toggle="tooltip" class="poptip" title="" data-original-title="Bitcoin Address"><kbd class="selectable-plain">37i4kBZBDguWmtBApqzx8qRgV1PRXDRHsj</kbd></div></span>
+		<span class="col-xs-12 col-sm-6 col-md-3 text-right notranslate top-bottom-padding-10" id="balances_37i4kBZBDguWmtBApqzx8qRgV1PRXDRHsj">
+		  <span>
+		    <span class="available_balance_index hidden notranslate">0.00000000</span>
+		    <kbd class="notranslate text-muted selectable-plain-no-color poptip" data-toggle="tooltip" title="" data-original-title="Available Balance">0.00000</kbd>
+		    <span class="text-muted currency_symbol ">฿</span>
+		  </span>
+		  
+		  <span class="text-info notranslate poptip pending_amount" data-toggle="tooltip" title="" data-original-title="Pending Amount">
+		  </span>
+		</span>
+		
+		<span class="col-xs-12 col-sm-6 col-md-2 text-right">
+		  
+		  <span class="available_balance notranslate hidden" translate="no">0.00000</span>
+		  <span class="from_user_ids notranslate hidden" translate="no">0</span>
+		  <span class="from_labels notranslate hidden" translate="no">default</span>
+		  <span class="withdraw_from notranslate hidden" translate="no">37i4kBZBDguWmtBApqzx8qRgV1PRXDRHsj</span>
+		  <span class="outer_deposit_address notranslate hidden" translate="no">37i4kBZBDguWmtBApqzx8qRgV1PRXDRHsj</span>
+		  
+		  <button class="depositbutton btn btn-default padding-5">
+		    <i class="fa fa-qrcode fa-fw poptip" data-toggle="tooltip" title="" data-original-title="View QR Code"></i>
+		  </button>
+		  
+		  <button class="btn btn-default disabled padding-5"><i class="fa fa-fw"></i></button>
+		  
+		  <a class="btn btn-default poptip padding-5" title="" href="https://chain.so/address/BTC/37i4kBZBDguWmtBApqzx8qRgV1PRXDRHsj" target="_blank" rel="noreferrer" data-toggle="tooltip" data-original-title="Transaction History"><i class="fa fa-bars fa-fw text-muted"></i></a>
+		  
+		  <form action="/dashboard/btc" method="post" id="archivalform" novalidate="novalidate">
+		    <input name="authenticity_token" value="NZzkE3qthMm2aGdzg9geFNfgHBFNQvF5p8pmVF4hpgc=" type="hidden">
+		    <input name="label" value="default" type="hidden">
+		    <input name="api_key" value="c2ee-27bd-dd34-96fa" type="hidden">
+		    <input name="archive_address" value="true" type="hidden">
+		  </form>
+		  
+		</span>
+		
+		
+	      </div>
+	    </div></div>
+	  
+	  <div class="jplist-panel box panel-bottom">
+	    <!-- pagination results -->
+	    <div class="jplist-label dash-font-size" data-type="Page {current} of {pages}" data-control-type="pagination-info" data-control-name="paging" data-control-action="paging">Page 1 of 1</div>
+	    
+	    <!-- pagination -->
+	    <div class="jplist-pagination dash-font-size jplist-one-page" data-control-type="pagination" data-control-name="paging" data-control-action="paging"><div class="jplist-pagingprev jplist-hidden" data-type="pagingprev"><button type="button" class="jplist-first" data-number="0" data-type="first">«</button><button type="button" class="jplist-prev" data-type="prev" data-number="0">‹</button></div><div class="jplist-pagingmid" data-type="pagingmid"><div class="jplist-pagesbox" data-type="pagesbox"><button type="button" data-type="page" class="jplist-current" data-active="true" data-number="0">1</button> </div></div><div class="jplist-pagingnext jplist-hidden" data-type="pagingnext"><button type="button" class="jplist-next" data-type="next" data-number="0">›</button><button type="button" class="jplist-last" data-type="last" data-number="0">»</button></div></div>
+	    
+	  </div>
+	  
+	  <!-- end of addresses -->
+        </div>
+	
+      </div>
+    </div>
+    
+    <p style="margin: 15px;"></p>
+    
+    <div class="row hidden dash-font-size" style="margin-top: 25px;" id="txHistoryContainer">
+      <h4 class="text-center">Recent Transactions<br><small><span class="poptip" data-toggle="tooltip" data-placement="top" title="" data-original-title="Transactions sent by Green Block.io Addresses are instantly spendable on receipt."><i class="fa fa-bolt text-success"></i> / <i class="fa fa-bolt"></i> = sent by a Green Address</span></small></h4>
+      <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 text-center tx-history-box">
+	
+	<table class="table table-hover" id="txTable">
+	  <tbody>
+	    <!-- populated through ajax -->
+	  </tbody>
+	</table>
+      </div>
+    </div>
+    
+  </div>
+  
+</div>
+
+<!--  
+      </div>
+-->
+
+
+
+    </div>
+    
+    <footer id="page-footer">
+      <div class="container">
+	<p><span>Have questions or feedback?</span> <a href="https://block.io/contacts" class="gold button">Contact Us</a></p>
+	<div class="col sm-col-03 md-col-06 lg-col-03">
+	  <p>
+	    <img src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/blockio-wordmark-white.svg" class="logo">
+	    <span>© 2017 Block.io</span>
+	  </p>
+	</div>
+	<div class="col sm-col-03 md-col-02 lg-col-03">
+	  <h2>For developers</h2>
+	  <ul>
+	    <li><a href="https://block.io/pricing">Pricing</a></li>
+	    <li><a href="https://block.io/api">API Docs</a></li>
+	    <li><a href="http://status.block.io/" target="_blank">Platform Status</a></li>
+	    
+	    <li><a href="https://chain.so/?gn=6">Blockchain Explorer</a></li>
+	  </ul>
+	</div>
+	<div class="col sm-col-03 md-col-02 lg-col-03">
+	  <h2>About Block.io</h2>
+	  <ul>
+	    <li><a href="https://block.io/faq">FAQ</a></li>
+	    <li><a href="https://block.leaddyno.com/" target="_blank">Become an Affiliate</a></li>
+	  </ul>
+	</div>
+	<div class="col sm-col-03 md-col-02 lg-col-03 last">
+	  <h2>Connect with us</h2>
+	  <ul>
+	    <li><a href="https://www.facebook.com/blockapi" target="_blank">Facebook</a></li>
+	    <li><a href="https://twitter.com/blockio" target="_blank">Twitter</a></li>
+	    <li>#block.io (chat.freenode.net)</li>
+	  </ul>
+	</div>
+      </div>
+    </footer>
+
+
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/zxcvbn.js" type="text/javascript" async=""></script><script async="" src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/analytics.js"></script><script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jquery-2.js"></script>
+
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/ct_ads.js"></script>
+
+
+
+
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jplist-core.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jplist.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jplist_002.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/jplist_003.js"></script>
+
+
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/combined.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/tab.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/responsiveCarousel.js"></script>
+
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/crypto-js.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/blockio.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/bip39-min.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/secrets_helper.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/withdraw.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/sweeper.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/secrets.js"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/zxcvbn-async.js" async="true"></script>
+<script src="Block.io:%20Bitcoin%20API%20and%20More_HomeAfterLogin_files/google_analytics.js"></script>
+
+
+
+
+
+</body></html>

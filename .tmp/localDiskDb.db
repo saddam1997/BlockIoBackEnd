@@ -1,0 +1,872 @@
+{
+  "data": {
+    "user": [
+      {
+        "email": "test3@gmail.com",
+        "password": "test3@gmail.co",
+        "balance": 0,
+        "id": 3
+      },
+      {
+        "email": "test4@gmail.com",
+        "password": "test4@gmail.co",
+        "balance": 0,
+        "id": 4
+      },
+      {
+        "email": "test7@gmail.om",
+        "password": "test7@gmail.o",
+        "balance": 0,
+        "id": 5
+      },
+      {
+        "email": "test17@gmail.om",
+        "password": "test17@gmail.o",
+        "balance": 0,
+        "id": 6
+      },
+      {
+        "email": "test70@gmail.om",
+        "password": "test70@gmail.o",
+        "balance": 0,
+        "id": 7
+      },
+      {
+        "email": "testasdf@gmail.com",
+        "password": "testasdf@gmail.co",
+        "balance": 0,
+        "id": 8
+      },
+      {
+        "email": "testasdf1@gmail.com",
+        "password": "testasdf1@gmail.co",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$Q47VxAXH7pte.1jOiv73..rwISnXKbiUb.8gYRzb005FvvB.FcwVS",
+        "id": 9
+      },
+      {
+        "email": "testasdf2@gmail.com",
+        "password": "testasdf2@gmail.co",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$h/B/gosMvd/SrX/dp1tjwuZf9bvcButNIkLX78oXfGdFRtfSDe0sK",
+        "id": 10
+      },
+      {
+        "email": "same@gmail.com",
+        "password": "same@gmail.co",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$IyxJd1hUmJ8D4h81oKHGNeXn2BaaK3aLU03cwTuxMZg7IshMOLD4K",
+        "id": 11
+      },
+      {
+        "email": "same1@gmail.com",
+        "password": "same1@gmail.co",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$LkSw5JndRSK549ww.h/weOurxyrHRD8tRkBV/Ll.00Tod9lIf8deC",
+        "id": 12
+      },
+      {
+        "email": "mail.mail@mail.com",
+        "password": "mail.mail@mail.com",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$S.51aY4Q7GpsWqmPSh2x.e/XlWwcapihSNsDjFqnUkqY6bgWzTBym",
+        "id": 13
+      },
+      {
+        "email": "testasdf3@gmail.com",
+        "password": "testasdf3@gmail.co",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$.B.2/b3QbizR8UkuXj7dGetsFAMh1aTfWkKfoz69.hwR4h.Kmy4Hy",
+        "id": 14
+      },
+      {
+        "email": "testt@gmail.com",
+        "password": "testt@gmail.com",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$Jo/8pNUaxJv.IX4XhpJb1u.T0B6KfPUgUUJByCBWuR3ZuI0wvkQgG",
+        "id": 15
+      },
+      {
+        "email": "testt1@gmail.com",
+        "password": "testt1@gmail.com",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$8dGHNtGQ4ZCz4uASihiafuZEToAHHik4.gaVSE3cfU8SdWAfliK2G",
+        "id": 16
+      },
+      {
+        "email": "shubam@gmail.com",
+        "password": "shubam@gmail.com",
+        "balance": 0,
+        "encryptedPassword": "$2a$10$XivQUKkpbyClymQv4Lbgp.zCq43OS0GbXG8tSiLbS1XNAwIRnZVsq",
+        "id": 17
+      }
+    ],
+    "useraddresses": [
+      {
+        "label": "default",
+        "userAddress": "146Fep36hGC3DGGJzjWiUrX2RVwGz7b2bK",
+        "user": 1,
+        "id": 1
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1DFVUJKNDQjopxuZJNMxaLTtgMdt2DFDqH",
+        "id": 2
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1PbTXawLPv15gLGnHTipXR8LCH5sFb7nqE",
+        "id": 3
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1BPgT3xw5ESPniwnU5jnhd5gZu1JL7mzV1",
+        "id": 4
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1KV7AWrpiHaCfWauBv3GGUoyDMwW2iw6Hr",
+        "id": 5
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1LYW6e3FXUfwrdLAWkSDqn32TWSBsR3HuN",
+        "id": 6
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "13SZHb6yK3zVwgjkFsGha7mueRjnEWwQwt",
+        "id": 7
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1FHTRgJ8up5h5erszrjcwk3XJzXEicL6Vv",
+        "id": 8
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "149DmiFiqGqz7Rog5S6Sys4JsEisKTivVC",
+        "id": 9
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1dPJg8uRucy5q4RMvoaBW96syk3n6ytsM",
+        "id": 10
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1GLDnr3c68smV7JTmXNhErYJ45NvZ9fcX4",
+        "id": 11
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1LfEi3zzHQuAmfySrjSejwsryaDKRLSopF",
+        "id": 12
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "16EkSxtgYUoTv7f3rZoRmnwe9ExCz7BHfL",
+        "id": 13
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "13qtTmHYNZofLhQC1HLC2K1G5E4qkSnrqV",
+        "id": 14
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1Chvu2UB7qQPQYv3BPuyUMtxR2mA66C5gy",
+        "id": 15
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1518bLHAyAzyp8QJFG2NUaoCsGfsiT6ykB",
+        "id": 16
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1NpYEvtLcgYtTpudPoKRTavmdJVvT1La8w",
+        "id": 17
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1P5HNTcxeKNkWF1JqJmR9mQirawrmNvDqX",
+        "id": 18
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "181giGsFPw5iWw6VbGRJd7MapvzrH28ZrA",
+        "id": 19
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "14TSYzbRH6gsfm54ogt7LpbKbZMP5Baukf",
+        "id": 20
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1Q91GVbGbMSWGgH2gbpNuj8JdZeDBaC6WB",
+        "id": 21
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1FmRQTF3Ma1DhXVa28nhVrwRjBbkeJb9zT",
+        "id": 22
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1UT7sarJcmK3fUwvYxRtMxREWN1m9FU8B",
+        "id": 23
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1A4fK1Kid9F36gGSLSmjNWaB1yjxqf8etL",
+        "id": 24
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "16Qymy3EZmxEzcVkFsqJZBJezm9Cd1rQv5",
+        "id": 25
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1B7QnKikAsx7pzxoPLUhnxrxUdqQw48tb7",
+        "id": 26
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "12gpF7EU1UQVaiTZeu16ZGX3ksKAMtBNSL",
+        "id": 27
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1LmKAu8vgjMoiokbZHHb6qy4UosR4w1kp1",
+        "id": 28
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1CwsMyDcnUywyaGHx19yhvGgJFEkKq8GTx",
+        "id": 29
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "13YxmmqT3jGYYLJXzAurpnj6uksbLij67D",
+        "id": 30
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1FVyqSZGLnWCa1DJoYfDCEgJdBjDPHRKgH",
+        "id": 31
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "15aTUTeEn4i4K9jRVCJg9up37YhZGqobmA",
+        "id": 32
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1EpCuyBHDguGYYYdr3oAyy6k67kxvPUfFk",
+        "id": 33
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1NHJhoM3rJAmeQUtfqZy3i357in4mobvFH",
+        "id": 34
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1LPiJ7Skjrx1KA5znLQJYDkUrYYNT1TsCL",
+        "id": 35
+      },
+      {
+        "label": "NewCreated",
+        "user": 1,
+        "userAddress": "1DVNvXoSpNW83p46KVodduXcEp6nkEgkfD",
+        "id": 36
+      },
+      {
+        "label": "default",
+        "userAddress": "1BgkUiY5gmzwFttaNsYfUscC5YeMqdQpdY",
+        "user": 2,
+        "id": 37
+      },
+      {
+        "label": "default",
+        "userAddress": "1PqM7f4JoAVD4AN4BzM38zvkJDuSdyCwrG",
+        "user": 3,
+        "id": 38
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "1C2Nvs9vsgiqBViG1A6cQTVkwwHNQoCqRn",
+        "id": 39
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "19szEMUZCJRiF4erfYkqM72KAiiPJqrrZ9",
+        "id": 40
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "16y1C3qbXE2649NYxvW5U62ihngX7mD3mn",
+        "id": 41
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "167rr1EmEXpnvC8YqhRpasZRCrJc8BtgKU",
+        "id": 42
+      },
+      {
+        "label": "default",
+        "userAddress": "16gK5Ma99Rsf4PS4GoRdBLKYGQxuaYTR8",
+        "user": 4,
+        "id": 43
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "14usswJ6UTDVX4tV2wtkte7PMFCDBorbmM",
+        "id": 44
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "13AuHDAyHFopeHNZ2baAhi7JMrvqr7JfTz",
+        "id": 45
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "12e5ep9H6cqREjiupGWrtKMfWnaLbmRx6o",
+        "id": 46
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "1GymZBsASbnWZ7sq432QxLN9RMvbSyKxeC",
+        "id": 47
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "15XwWSUJgQLWSbBozrF5sSeNujrGcyc1nJ",
+        "id": 48
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "1H1KhXMxzUexH3t2Hc6k55PsU9hK6CQm46",
+        "id": 49
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "1MczQjgxxjYm8qZQakMPcHAXiumibFbFSW",
+        "id": 50
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "14kYH5xK5WmgLmYoatbD1tsQqBqrdWP7cy",
+        "id": 51
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "1BMNt8ha19Q726VAPFgGDAnu9jJ5297zo3",
+        "id": 52
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "1BfEpyijUTrpNbf1KmbBSN3Hs6rXeor4tr",
+        "id": 53
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "1KraRTP9C4FXj3zq6aiMw1jQoiqzYtv7ay",
+        "id": 54
+      },
+      {
+        "label": "NewCreated",
+        "user": 3,
+        "userAddress": "15zDU2tuGCu7GTVedyUjbUtPdLbHb1cPXf",
+        "id": 55
+      },
+      {
+        "label": "default",
+        "userAddress": "1GEiKvkzqc6kCrt5KZnmWaDQxwNhfxMGRY",
+        "user": 5,
+        "id": 56
+      },
+      {
+        "label": "uiouoi",
+        "user": 3,
+        "userAddress": "1PSCJiCt9buWujA6rihZReXwZWXteGhRRb",
+        "id": 57
+      },
+      {
+        "label": "asdfasdf",
+        "user": 3,
+        "userAddress": "1Nq7oBPzGS4XFZqyHEHXhtaDWrQTQLYDGp",
+        "id": 58
+      },
+      {
+        "label": "testsss",
+        "user": 3,
+        "userAddress": "1BEzE39ocwoR216b2uhoau91KQUFJSbeUD",
+        "id": 59
+      },
+      {
+        "label": "ertert",
+        "user": 3,
+        "userAddress": "1A4PeRykfAAfCYDnuvQL6EpvbL9utat9rC",
+        "id": 60
+      },
+      {
+        "label": "tyutyu",
+        "user": 3,
+        "userAddress": "1GVjB1UTuSQaWbAgAtp4qBzk8DgDS8Tu2w",
+        "id": 61
+      },
+      {
+        "label": "ppppp",
+        "user": 3,
+        "userAddress": "1CBAtM2C5iK8CPMBcNSr3RgR5SyoiznyyB",
+        "id": 62
+      },
+      {
+        "label": "ooooo",
+        "user": 3,
+        "userAddress": "1LyLr4zZ5phg2HWWpWGdmJAV8ZzbbD1y3A",
+        "id": 63
+      },
+      {
+        "label": "iiiiiiii",
+        "user": 3,
+        "userAddress": "1GxFdBLCbdGoof7B1wGdv5XHX9YLpAEQgJ",
+        "id": 64
+      },
+      {
+        "label": "uuuuuu",
+        "user": 3,
+        "userAddress": "12nxV5mL8XaZZSQdvzK6G82rL4Sf5voEgz",
+        "id": 65
+      },
+      {
+        "label": "yyyyyyy",
+        "user": 3,
+        "userAddress": "1BwJYTsjCufSEVbL9vHFMmD8LQG2dS3fLQ",
+        "id": 66
+      },
+      {
+        "label": "tttt",
+        "user": 3,
+        "userAddress": "1PUsz4VhTeuQ9EzifAzmBcm6krSHN7FfWv",
+        "id": 67
+      },
+      {
+        "label": "rrrrr",
+        "user": 3,
+        "userAddress": "16RsMYNrLHYooqcQs1m4pqPrA8MEBtv8iA",
+        "id": 68
+      },
+      {
+        "label": "eeeee",
+        "user": 3,
+        "userAddress": "1JMwn3AmsdKbDtSkHMatoh6kkten2bQXDC",
+        "id": 69
+      },
+      {
+        "label": "www",
+        "user": 3,
+        "userAddress": "17T8SZxKEegiwp4LvJBNqrrPbkfGMFKdVF",
+        "id": 70
+      },
+      {
+        "label": "qqqq",
+        "user": 3,
+        "userAddress": "16UNaLjkhJN73dmaKZYXYhzDB2Ht3tBCbY",
+        "id": 71
+      },
+      {
+        "label": "default",
+        "userAddress": "1Q4cyAvqwXZWU659UiMwns7ty6pBKZ62QH",
+        "user": 6,
+        "id": 72
+      },
+      {
+        "label": "default",
+        "userAddress": "17GpiE9i7fWN2pyW5U5RmFkvV22WVZk8LA",
+        "user": 7,
+        "id": 73
+      },
+      {
+        "label": "default",
+        "userAddress": "1Np4H6P3yJeivMfbDFqAPoMBLJfrQ7jnqU",
+        "user": 8,
+        "id": 74
+      },
+      {
+        "label": "mmmmmm",
+        "user": 3,
+        "userAddress": "1CGBQCzFefA7qa5wNis8QzGgCVcuh8CSsw",
+        "id": 75
+      },
+      {
+        "userAddress": "",
+        "user": 9,
+        "id": 76
+      },
+      {
+        "userAddress": "",
+        "user": 10,
+        "id": 77
+      },
+      {
+        "label": "asdfsdf",
+        "user": 10,
+        "userAddress": "17wG6TMx2HURtNQKhfTNbx1KkMciZHrCJQ",
+        "id": 78
+      },
+      {
+        "label": "qwerqwerwqer",
+        "user": 10,
+        "userAddress": "1FJRr1UozftnWCXnALoCVaTZAbRoqEy8Fy",
+        "id": 79
+      },
+      {
+        "label": "zzxxxx",
+        "user": 10,
+        "userAddress": "1GF6tJx4kJx3hQhjVZGNYgGaJtH5DrzLpR",
+        "id": 80
+      },
+      {
+        "label": "rtyrtyrty",
+        "user": 10,
+        "userAddress": "19ts8LYARxx9wGUrsxgrtCsxP6GmL8fZtG",
+        "id": 81
+      },
+      {
+        "label": "wwwww",
+        "user": 10,
+        "userAddress": "17zr8pnMFnhHcSyYBJbwXc4N125m3ZSx2m",
+        "id": 82
+      },
+      {
+        "label": "eeeee",
+        "user": 10,
+        "userAddress": "1jwWHjqzRt6miLBKAbeYkmbPqXwp8esjg",
+        "id": 83
+      },
+      {
+        "label": "ttttttt",
+        "user": 10,
+        "userAddress": "1JwFW4KEpENtF2GzTDxwp93cbejKstF91x",
+        "id": 84
+      },
+      {
+        "label": "default",
+        "userAddress": "1NpgkT8KhwAcUP8GosoTgx9A3Apu1kJmmo",
+        "user": 11,
+        "id": 85
+      },
+      {
+        "label": "sdfgsdf",
+        "user": 11,
+        "userAddress": "16yrQ4kEkSjT9ryyenRdRy2pmgjDdtr8Hs",
+        "id": 86
+      },
+      {
+        "label": "tertrt",
+        "user": 11,
+        "userAddress": "1MhLBzcff77LNen3XfkEf843DyQghoE3Xu",
+        "id": 87
+      },
+      {
+        "label": "ttttt",
+        "user": 11,
+        "userAddress": "1MErJ9oTQbs5WRAJV83aGUgcDTQjqk2Ti4",
+        "id": 88
+      },
+      {
+        "label": "asdfsadf",
+        "user": 10,
+        "userAddress": "1PjVwp9fGXECFdXWveNLpWizJNa9xjGkgD",
+        "id": 89
+      },
+      {
+        "label": "default",
+        "userAddress": "1BUpmPEkNNvi5mF2zKPwKXHp2GrLV9Knfi",
+        "user": 12,
+        "id": 90
+      },
+      {
+        "label": "hjkhj",
+        "user": 12,
+        "userAddress": "1Cv2RD8tRer7foT3WQhrjoqQfH2o9mFjYD",
+        "id": 91
+      },
+      {
+        "label": "jkjhk",
+        "user": 12,
+        "userAddress": "1NXXP7diVxaYsSkXbv5XNnWHwRtXu6cfwD",
+        "id": 92
+      },
+      {
+        "label": "default",
+        "userAddress": null,
+        "user": 13,
+        "id": 93
+      },
+      {
+        "userAddress": "",
+        "user": 14,
+        "id": 94
+      },
+      {
+        "userAddress": "",
+        "user": 15,
+        "id": 95
+      },
+      {
+        "label": "asdf",
+        "user": 15,
+        "userAddress": "1K6BA4HycA3ep11gGC2SnaxGattPyuvH91",
+        "id": 96
+      },
+      {
+        "label": "teset",
+        "user": 15,
+        "userAddress": "17oxaCY1R6QQVstKYDbiuwJYSuRJD45h19",
+        "id": 97
+      },
+      {
+        "userAddress": "",
+        "user": 16,
+        "id": 98
+      },
+      {
+        "label": "tree",
+        "user": 16,
+        "userAddress": "1Mywo6iZ4LzpmQhdVFpf4zYPfGwAsTRWm9",
+        "id": 99
+      },
+      {
+        "label": "etret",
+        "user": 16,
+        "userAddress": "1EvnCfTHMFMXGypMmD6TKSdcBzpzMVxPKm",
+        "id": 100
+      },
+      {
+        "userAddress": "",
+        "user": 17,
+        "id": 101
+      },
+      {
+        "label": "jghgjh",
+        "user": 17,
+        "userAddress": "1CRicSinxvLpXV4R1SxcY3dvhZYr292dts",
+        "id": 102
+      }
+    ],
+    "usertypes": [
+      {
+        "userType": "normaluser",
+        "user": 1,
+        "id": 1
+      },
+      {
+        "userType": "normaluser",
+        "user": 2,
+        "id": 2
+      },
+      {
+        "userType": "normaluser",
+        "user": 3,
+        "id": 3
+      },
+      {
+        "userType": "normaluser",
+        "user": 4,
+        "id": 4
+      },
+      {
+        "userType": "normaluser",
+        "user": 5,
+        "id": 5
+      },
+      {
+        "userType": "normaluser",
+        "user": 6,
+        "id": 6
+      },
+      {
+        "userType": "normaluser",
+        "user": 7,
+        "id": 7
+      },
+      {
+        "userType": "normaluser",
+        "user": 8,
+        "id": 8
+      },
+      {
+        "userType": "normaluser",
+        "user": 9,
+        "id": 9
+      },
+      {
+        "userType": "normaluser",
+        "user": 10,
+        "id": 10
+      },
+      {
+        "userType": "normaluser",
+        "user": 11,
+        "id": 11
+      },
+      {
+        "userType": "normaluser",
+        "user": 12,
+        "id": 12
+      },
+      {
+        "userType": "normaluser",
+        "user": 13,
+        "id": 13
+      },
+      {
+        "userType": "normaluser",
+        "user": 14,
+        "id": 14
+      },
+      {
+        "userType": "normaluser",
+        "user": 15,
+        "id": 15
+      },
+      {
+        "userType": "normaluser",
+        "user": 16,
+        "id": 16
+      },
+      {
+        "userType": "normaluser",
+        "user": 17,
+        "id": 17
+      }
+    ]
+  },
+  "schema": {
+    "user": {
+      "email": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "balance": {
+        "type": "float",
+        "defaultsTo": 0
+      },
+      "encryptedPassword": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    },
+    "useraddresses": {
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "label": {
+        "type": "string"
+      },
+      "userAddress": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    },
+    "usertypes": {
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "userType": {
+        "type": "string"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      }
+    }
+  },
+  "counters": {
+    "user": {
+      "id": 17
+    },
+    "useraddresses": {
+      "id": 102
+    },
+    "usertypes": {
+      "id": 17
+    }
+  }
+}

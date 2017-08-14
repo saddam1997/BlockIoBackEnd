@@ -1,0 +1,319 @@
+
+
+
+
+
+
+    		<section class="hero clearfix">
+			<div class="background">
+				<img src="images/stripe-mini.svg" />
+				<img src="images/dots-mini.svg" />
+				<img src="images/stripe-horiz-mini.svg" />
+				<img src="images/dots-horiz-mini.svg" />
+				<!-- <img src="./images/hero.svg" class="hero-items"> -->
+			</div>
+			<div class="container clearfix">
+				<div class="col md-col-05 lg-col-07">
+					<h1><span class="name"><img src="images/blockio-wordmark-white.svg" class="logo" /></span>
+						<span>The world's easiest Bitcoin Wallet as a Service.</span></h1>
+				</div>
+				<div class="col md-col-04 lg-col-03 last">
+					<div class="counter">
+						<p><span>3449537367</span> transactions &amp; counting</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+
+			  <form class="signup cta lg-col-06" method="post" action="/users" id="new_user">
+
+			    <h2>Get your free wallet now.</h2>
+			    <input name="authenticity_token" type="hidden" value="WXlJNsTBXhVFPiTGHtT1N82tnGvLQmJhxUA7KY3zL6U=">
+			    <ul>
+			      <li>
+				<input name="user[email]" id="user_email" type="email" placeholder="Your Email Address" autofocus=false />
+				</li>
+			      <li>
+				<input name="user[password]" id="user_password" type="password" placeholder="Password" autofocus=false />
+			      </li>
+			    </ul>
+			    <p><input type="submit" class="button red" value="Create Account" /></p>
+
+			    <div style="position:absolute; left: -6500px;">
+  <input class="form-control" id=password name="password" placeholder="Do not fill this..." type=password />
+</div>
+
+<div style="position:absolute; left: -6500px;">
+  <input class="form-control" id=email name="email" placeholder="Do not fill this..." type=text />
+</div>
+
+<div style="position:absolute; left: -6500px;">
+  <input class="form-control" id=username name="user[username]" placeholder="Do not fill this..." type=text />
+</div>
+
+<span id=shex style="display: none;">912363b7efa78ce0bd3d3561eaf7bd7b</span>
+
+
+
+			  </form>
+
+			</div>
+		</section>
+
+		<div class="content">
+
+			<section class="wallet">
+				<div class="container">
+					<h2>The most versatile and secure wallet for all your coins.</h2>
+					<ul>
+						<li class="col sm-col-03 md-col-03 lg-col-03">
+							<img src="images/multi-currency.png" />
+							<h3>Multi-currency</h3>
+							<p>Conveniently manage your bitcoin, dogecoin, and litecoin in one place.</p>
+						</li>
+						<li class="col sm-col-03 md-col-03 lg-col-03">
+							<img src="images/transact-instantly.png" />
+							<h3>Transact instantly</h3>
+							<p>With our Green Addresses there's no wait to use your coins.</p>
+						</li>
+						<li class="col sm-col-03 md-col-03 lg-col-03">
+							<img src="images/control-your-wallets.png" />
+							<h3>Own your money</h3>
+							<p>You sign all of your transactions &mdash; no one else can transact for you.</p>
+						</li>
+						<li class="col sm-col-03 md-col-03 lg-col-03 last">
+							<img src="images/fast-and-stable.png" />
+							<h3>Fast &amp; stable</h3>
+							<p>99.99%+ uptime and an average response time of only 80 ms.</p>
+						</li>
+					</ul>
+				</div>
+			</section>
+
+			<section class="api developer">
+				<div class="container">
+					<h2>Build apps with as little as 3 lines of code.</h2>
+					<div class="col sm-col-03 md-col-06 lg-col-08 code">
+						<ul id="api-tabs" class="nav nav-tabs code tabs">
+							<li class="active"><a data-toggle="tab" href="#curl-code">cURL</a></li>
+							<li><a data-toggle="tab" href="#ruby-code">Ruby</a></li>
+							<li><a data-toggle="tab" href="#nodejs-code">NodeJS</a></li>
+							<li><a data-toggle="tab" href="#php-code">PHP</a></li>
+							<li><a data-toggle="tab" href="#python-code">Python</a></li>
+						</ul>
+
+	      				<div class="code tab-content">
+							<div class="tab-pane in active" id="curl-code">
+								<p><a href="/api/curl">See more CURL API examples &rsaquo;</a></p>
+
+		  						<pre class="text-left">
+<code class="language-ruby"># create a new Bitcoin address
+$ curl https://block.io/api/v2/get_new_address/?api_key={API KEY}
+{
+  "status": "success",
+  "data": {
+    "network": "BTC",
+    "user_id": 1,
+    "address": "3EL5SKSjEzFQDBmXA5JFbsZu48vKnNSdDH",
+    "label": "random"
+  }
+}
+	</code></pre>
+
+      					</div>
+
+      					<div class="tab-pane" id="ruby-code">
+      						<p><a href='/api/ruby'>See more Ruby API examples &rsaquo;</a></p>
+							<pre class="text-left">
+<code class="language-ruby"># create a new Bitcoin address
+>> BlockIo.get_new_address
+{
+  "status": "success",
+  "data": {
+    "network": "BTC",
+    "user_id": 1,
+    "address": "3EL5SKSjEzFQDBmXA5JFbsZu48vKnNSdDH",
+    "label": "random"
+  }
+}
+	</code></pre>
+      					</div>
+
+      					<div class="tab-pane" id="nodejs-code">
+      						<p><a href='/api/nodejs'>See more Node.js API examples &rsaquo;</a></p>
+							<pre class="text-left">
+<code class="language-javascript">// create a new Bitcoin address
+> block_io.get_new_address({}, console.log);
+{
+  "status": "success",
+  "data": {
+    "network": "BTC",
+    "user_id": 1,
+    "address": "3EL5SKSjEzFQDBmXA5JFbsZu48vKnNSdDH",
+    "label": "random"
+  }
+}
+	</code></pre>
+      </div>
+
+      					<div class="tab-pane" id="php-code">
+      						<p><a href='/api/php'>See more PHP API examples &rsaquo;</a></p>
+							<pre class="text-left">
+<code class="language-php">// create a new Bitcoin address
+> $block_io->get_new_address();
+{
+  "status": "success",
+  "data": {
+    "network": "BTC",
+    "user_id": 1,
+    "address": "3EL5SKSjEzFQDBmXA5JFbsZu48vKnNSdDH",
+    "label": "random"
+  }
+}
+	</code></pre>
+
+
+      					</div>
+
+      					<div class="tab-pane" id="python-code">
+      						<p><a href='/api/python'>See more Python API examples &rsaquo;</a></p>
+							<pre class="text-left">
+<code class="language-ruby"># create a new Bitcoin address
+>> block_io.get_new_address()
+{
+  "status": "success",
+  "data": {
+    "network": "BTC",
+    "user_id": 1,
+    "address": "3EL5SKSjEzFQDBmXA5JFbsZu48vKnNSdDH",
+    "label": "random"
+  }
+}
+	</code></pre>
+
+
+	      					</div>
+	    				</div> <!-- tab content -->
+					</div>
+					<div class="col text sm-col-03 md-col-06 lg-col-04 last">
+						<h3>A Versatile API</h3>
+						<ul class="bulleted">
+							<li>Process transactions</li>
+							<li>Create wallets for your users</li>
+							<li>Use state-of-the-art MultiSig security</li>
+							<li>Validate in 10 seconds</li>
+						</ul>
+
+						<p><a href="/contacts">Get in touch</a> to learn about our Distributed Trust framework.</p>
+
+						<p><a href="/api" class="button">Read the Docs</a></p>
+					</div>
+				</div>
+			</section>
+
+			<section class="showcase">
+				<div id="slider-nav" class="crsl-nav">
+					<a href="#" class="previous">&lsaquo;</a>
+					<a href="#" class="next">&rsaquo;</a>
+				</div>
+				<div class="container">
+					<h2>Powered by Block.io<br>
+					<small>Over 500 developers have built 60+ applications world-wide!</small></h2>
+				</div>
+				<div class="container carousel">
+					<div class="crsl-items" data-navigation="slider-nav">
+						<ul class="crsl-wrap quotes center clearfix slider">
+						  <li class="crsl-item col sm-col-03 md-col-03 lg-col-03">
+						    <a href="#">
+						      <img src="images/logo-greenschool.png" class="greenschool bw" />
+						      <img src="images/logo-greenschool-color.png" class="greenschool color" />
+						    </a>
+						    <p>&ldquo;The 10-year-old students quickly &amp; easily adopted Block.io as a transaction center.&rdquo;</p>
+						  </li>
+
+						  <li class="crsl-item col sm-col-03 md-col-03 lg-col-03">
+						    <a href="#">
+						      <img src="images/bitanswers.png" class="cryptowoo bw" />
+						      <img src="images/bitanswers.png" class="cryptowoo color" />
+						    </a>
+						    <p>&ldquo;Using the API is very simple and requires minimal code.&rdquo;</p>
+						  </li>
+						  <li class="crsl-item col sm-col-03 md-col-03 lg-col-03">
+						    <a href="https://www.cryptowoo.com/">
+						      <img src="images/logo-cryptowoo.png" class="cryptowoo bw" />
+						      <img src="images/logo-cryptowoo-color.png" class="cryptowoo color" />
+						    </a>
+						    <p>&ldquo;Awesome interactive API docs, fast support response time.&rdquo;</p>
+						  </li>
+						  <li class="crsl-item col sm-col-03 md-col-03 lg-col-03">
+						    <a href="https://www.quickdoge.com/">
+						      <img src="images/logo-quickdoge.png" class="quickdoge bw"/>
+						      <img src="images/logo-quickdoge-color.png" class="quickdoge color" />
+						    </a>
+						    <p>&ldquo;The security and awesome support are crucial.&rdquo;</p>
+						  </li>
+						  <li class="crsl-item col sm-col-03 md-col-03 lg-col-03 last">
+						    <a href="http://www.cryptofaucets.co/">
+						      <img src="images/logo-cryptofaucets.png" class="cryptofaucets bw" />
+						      <img src="images/logo-cryptofaucets-color.png" class="cryptofaucets color" />
+						    </a>
+						    <p>&ldquo;It's the only service I have found that is able to do everything I need it to do and do it well.&rdquo;</p>
+						  </li>
+						  <li class="crsl-item col sm-col-03 md-col-03 lg-col-03">
+						    <a href="#">
+						      <img src="images/cointrack.png" class="cryptofaucets bw" />
+						      <img src="images/cointrack.png" class="cryptofaucets color" />
+						    </a>
+						    <p>&ldquo;Block.io is easier to use and more reliable than their competitors.&rdquo;</p>
+						  </li>
+						  <li class="crsl-item col sm-col-03 md-col-03 lg-col-03">
+						    <a href="#">
+						      <img src="images/dogekeeper.png" class="cryptofaucets bw" />
+						      <img src="images/dogekeeper.png" class="cryptofaucets color" />
+						    </a>
+						    <p>&ldquo;Very robust, fast service with a powerful, easy to use API&rdquo;</p>
+						  </li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+
+
+    <footer id="page-footer">
+      <div class="container">
+	<p><span>Have questions or feedback?</span> <a href="/contacts" class="gold button">Contact Us</a></p>
+	<div class="col sm-col-03 md-col-06 lg-col-03">
+	  <p>
+	    <img src="images/blockio-wordmark-white.svg" class="logo" />
+	    <span>&copy; 2017 Block.io</span>
+	  </p>
+	</div>
+	<div class="col sm-col-03 md-col-02 lg-col-03">
+	  <h2>For developers</h2>
+	  <ul>
+	    <li><a href="/pricing">Pricing</a></li>
+	    <li><a href="/api">API Docs</a></li>
+	    <li><a href="http://status.block.io" target=_blank>Platform Status</a></li>
+
+	    <li><a href="https://chain.so/?gn=6">Blockchain Explorer</a></li>
+	  </ul>
+	</div>
+	<div class="col sm-col-03 md-col-02 lg-col-03">
+	  <h2>About Block.io</h2>
+	  <ul>
+	    <li><a href="/faq">FAQ</a></li>
+	    <li><a href="https://block.leaddyno.com/" target=_blank>Become an Affiliate</a></li>
+	  </ul>
+	</div>
+	<div class="col sm-col-03 md-col-02 lg-col-03 last">
+	  <h2>Connect with us</h2>
+	  <ul>
+	    <li><a href="https://www.facebook.com/blockapi" target=_blank>Facebook</a></li>
+	    <li><a href="https://twitter.com/blockio" target=_blank>Twitter</a></li>
+	    <li>#block.io (chat.freenode.net)</li>
+	  </ul>
+	</div>
+      </div>
+    </footer>
+</div>

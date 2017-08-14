@@ -1,0 +1,296 @@
+<div ng-controller="dashboardCtrl">
+  <div style="margin: 0 auto;">
+    <div id="bitcoin_news_widget_s_line" class="hidden-xs" style="margin-bottom: 15px;"></div>
+  </div>
+  <span id="curApiKey" class="notranslate hidden" translate="no">c2ee-27bd-dd34-96fa</span>
+  <span id="minConfirmations" class="notranslate hidden" translate="no">3</span>
+  <span id="curPrecision" class="notranslate hidden" translate="no">5</span>
+
+  <div id="modalCreateAddressbtc" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content dash-font-size">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Create Wallet Address</h4>
+        </div>
+        <form action="/dashboard/btc" method="post" id="createAddressFormbtc" class="modal-form">
+          <div class="modal-body text-center">
+            <p class="hidden-xs">This will create a random Bitcoin wallet address.</p>
+            <p class="visible-xs">Create a Bitcoin wallet address.</p>
+            <input name="authenticity_token" value="8BIwzE6kvWmFnjsmDaNYupjDe5mz2U1bI/3dlSXXq10=" type="hidden" />
+            <input type="hidden" value="true" name="get_new_address" />
+            <input type="hidden" value="c2ee-27bd-dd34-96fa" name="api_key" />
+            <input type="text" value="" name="label" class="form-control" placeholder="Optional label, examples: myhomewallet, pocketmoney, savings, ..." autocomplete="off" />
+          </div>
+          <div class="modal-footer">
+            <p class="text-muted">Labels are <strong>not</strong> wallet addresses.<span class="hidden-xs"> Leave blank if unsure.</span></p>
+            <button type="button" class="btn btn-md btn-default" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-md btn-success" id="createAddressSubmitbtc">Create</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <!--  modal withdraw amount or send amount -->
+  <div id="modalWithdrawAmountbtc" class="modal fade dash-font-size" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content dash-font-size">
+        <div class="modal-header">
+          <h4 class="modal-title">Send Bitcoin</h4>
+        </div>
+        <form action="/dashboard/btc" method="post" id="withdrawAmountFormbtc" class="modal-form" autocomplete="off">
+          <div class="modal-body text-center">
+            <h1 class="break-word" style="margin-bottom: 25px;"><span id="withdraw-bal-available">0.00000</span> &#3647;<br><small>Available Balance</small></h1>
+
+            <p id="withdraw-from" class="text-muted"></p>
+
+            <div class="douchebag_safari" style="left: -9999px; position: fixed; width: 1px;">
+              <input type="password" />
+              <input type="text" />
+              <input type="text" />
+            </div>
+
+            <input name="authenticity_token" value="8BIwzE6kvWmFnjsmDaNYupjDe5mz2U1bI/3dlSXXq10=" type="hidden" />
+            <input type="hidden" value="true" name="withdraw_amount" />
+            <input type="hidden" value="c2ee-27bd-dd34-96fa" name="api_key" />
+            <input type="hidden" value="" name="from_user_ids" id="from_user_ids_btc" />
+            <input type="number" step="any" lang="en" value="" name="ezdhxlgebppffnqpwvcfq" value="0.00" placeholder="Amount of Bitcoin to send..." required=required class="form-control" autocomplete="off" />
+            <input type="text" value="" name="oejkjclkfxjnzaxsphrq" class="form-control" placeholder="Destination Bitcoin address" required=required autocomplete="off" />
+
+            <input type="password" value="" name="ouqjpq_gfiajouoqzpa" class="form-control" placeholder="Secret PIN" required=required autocomplete="off" />
+
+            <select class="form-control notranslate poptip" id="priority_selector" data-toggle=tooltip title="Higher priority means faster confirmation during high network load. Recommended priority is marked with a *.">
+        		  <option value="low" >Priority: Low</option>
+        		  <option value="medium" selected>Priority: Medium*</option>
+        		  <option value="high" >Priority: High</option>
+        		</select>
+
+          </div>
+          <div class="modal-footer text-left">
+            <p><span class="text-bold text-muted">Minimum Network Fee (per Kb)</span>: <span id="network_fee_display" class="text-muted">0.00342</span> <span class="text-muted">&#3647;;</span><br> Actual network fees depend on the size of your transaction.</p>
+
+            <span class="payment_address_id" style="display: none;">oejkjclkfxjnzaxsphrq</span>
+            <span class="amount_id" style="display: none;">ezdhxlgebppffnqpwvcfq</span>
+            <span class="pin_current_id" style="display: none;">ouqjpq_gfiajouoqzpa</span>
+
+            <button type="button" class="btn btn-md btn-default" data-dismiss="modal" id="withdrawCancelButton">Cancel</button>
+            <button type="button" class="btn btn-md btn-success" id="withdrawalButton"><i class="fa fa-spinner fa-md hidden" id="withdrawSpinner"></i> <span id="withdrawSpinlabel">Send &#3647;</span></button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!--  modal Deposite amount or Recieved amount -->
+  <div id="modalDepositbtc" class="modal fade dash-font-size">
+    <div class="modal-dialog">
+      <div class="modal-content dash-font-size">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Deposit Bitcoin</h4>
+        </div>
+        <div class="modal-body text-center">
+          <div style="margin-bottom: 10px;">
+            <kbd class="deposit-address break-word hidden-md hidden-lg selectable-plain"></kbd>
+            <h4 class="deposit-address break-word hidden-xs hidden-sm"></h4>
+          </div>
+          <div id="qrcodeDiv"> </div>
+          <p>You can send Bitcoin to the above address.</p>
+          <p class="text-muted"><i class="text-info fa fa-info-circle poptip" data-placement=right data-toggle=tooltip title="This is a MultiSig address. If the sending service/wallet says this address is incorrect, that service/wallet does not support MultiSig addresses, and is most likely outdated and insecure."></i>            Address is invalid?</p>
+        </div>
+        <div class="modal-footer">
+          <p class="text-muted text-left">Confused about something? <a href="/contacts" target="_blank" rel="noreferrer">Contact us</a>, we're happy to help.</p>
+          <button class="btn btn-default btn-md" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-info btn-md reloadbutton">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modalSendBtcModal" class="modal fade dash-font-size">
+    <div class="modal-dialog">
+      <div class="modal-content dash-font-size">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title">Send BTC modal </h4>
+        </div>
+        <div class="modal-body text-center">
+
+          <div style="margin-bottom: 10px;">
+            <kbd class="deposit-address break-word hidden-md hidden-lg selectable-plain"></kbd>
+            <h4 class="deposit-address break-word hidden-xs hidden-sm"></h4>
+          </div>
+
+          <div id="qrcodeDiv"> </div>
+
+          <p>You can send Bitcoin to the above address.</p>
+          <p class="text-muted"><i class="text-info fa fa-info-circle poptip" data-placement=right data-toggle=tooltip title="This is a MultiSig address. If the sending service/wallet says this address is incorrect, that service/wallet does not support MultiSig addresses, and is most likely outdated and insecure."></i>            Address is invalid?</p>
+        </div>
+
+        <div class="modal-footer">
+          <p class="text-muted text-left">Confused about something? <a href="/contacts" target="_blank" rel="noreferrer">Contact us</a>, we're happy to help.</p>
+          <button class="btn btn-default btn-md" data-dismiss="modal">Cancel</button>
+          <button class="btn btn-info btn-md reloadbutton">Done</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container" style="margin: 0 auto;">
+    <div class="row" style="margin-bottom: 25px;">
+      <span class="currency_symbol notranslate hidden" translate="no">&#3647;</span>
+      <span class="cur_network notranslate hidden" translate="no">btc</span>
+      <div class="row" style="margin-bottom: 25px;">
+        <div class="col-md-4 col-md-offset-3 col-sm-4 col-sm-offset-2 col-xs-offset-2 col-xs-10">
+          <h2><%=user.balance %> &#3647;<br>
+            <small>
+              Balance
+	           </small>
+        </h2>
+        </div>
+        <div class="col-md-3 col-md-offset-0 col-sm-6 col-xs-offset-2 col-xs-10">
+          <h2 class="poptip" data-toggle="tooltip" title="Block.io requires 3 network confirmations for Bitcoin sent by non-Block.io addresses."><span class="text-muted">0.000 &#3647;</span><br><small>Pending Rec'd</small></h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-1 col-md-offset-3 col-xs-2 col-xs-offset-2 poptip" data-toggle=tooltip title="Send &#3647; to anyone.">
+          <span class="available_balance notranslate hidden" translate="no">0.00000</span>
+          <span class="from_user_ids notranslate hidden" translate="no"></span>
+          <span class="withdraw_from notranslate hidden" translate="no"></span>
+          <button class="btn btn-lg btn-default btn-responsive poptip  withdrawbutton"><i class="fa fa-send-o text-success fa-fw"></i></button>
+        </div>
+        <div class="col-md-2 col-xs-2 text-left">
+          <span class="outer_deposit_address notranslate hidden" translate="no"><%= (user.userAddresses)[0].userAddress%></span>
+          <button class="btn btn-lg btn-default btn-responsive poptip depositbutton" title="Deposit &#3647; into your Block.io account" data-toggle=tooltip>
+          <i class="fa fa-qrcode text-primary fa-fw"></i>
+        </button>
+        </div>
+
+        <div class="col-md-1 col-xs-2 col-md-offset-1">
+          <button class="btn btn-lg btn-default btn-responsive poptip " ng-click="createNewAddress()" title="Create a New Address" data-toggle=tooltip>
+            <i class="fa fa-plus-square-o fa-fw"></i>
+        </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="box" style="margin-bottom: 50px;">
+      <div class="center">
+
+          <div class="box text-shadow">
+            <div id="jplist-addrs" class="box jplist">
+              <% for(var i=0; i<(user.userAddresses).length; i++) {%>
+                     <div class="list box text-shadow address-container">
+                       <div class="list-item box row address-row dash-font-size">
+                         <div class="col-sm-12 col-md-12 text-left top-bottom-padding-5">
+                           <span class="col-xs-3 col-sm-1 col-md-1 title text-left" style="padding-top: 10px;"><%= i%>.</span>
+                           <span class="col-xs-9 col-sm-3 col-md-2 addrlabel text-left notranslate poptip"
+                           style="word-wrap: break-word; padding-top: 10px;" data-toggle=tooltip title="Label">
+                           <%= (user.userAddresses)[i].label%></span>
+                           <span class="col-xs-12 col-sm-8 col-md-4 address text-left notranslate top-bottom-padding-10">
+                           <div id="outer-deposit-address"  data-toggle=tooltip class="poptip" title="Bitcoin Address">
+                             <kbd class="selectable-plain"><%= (user.userAddresses)[i].userAddress%> </kbd></div>
+                           </span>
+                           <span class="col-xs-12 col-sm-6 col-md-3 text-right notranslate top-bottom-padding-10" id="balances_<%=user.address%>">
+                           <span>
+                             <span class="available_balance_index hidden notranslate">0.00000000</span>
+                           <kbd class="notranslate text-muted selectable-plain-no-color poptip" data-toggle=tooltip title="Available Balance">0.00000</kbd>
+                           <span class="text-muted currency_symbol ">&#3647;</span>
+                           </span>
+                           <span class="text-info notranslate poptip pending_amount" data-toggle=tooltip title="Pending Amount">
+                           </span>
+                           </span>
+                           <span class="col-xs-12 col-sm-6 col-md-2 text-right">
+                           <span class="available_balance notranslate hidden" translate="no">0.00000</span>
+                           <span class="from_user_ids notranslate hidden" translate="no">0</span>
+                           <span class="from_labels notranslate hidden" translate="no"><%= (user.userAddresses)[i].label%></span>
+                           <span class="withdraw_from notranslate hidden" translate="no"><%= (user.userAddresses)[i].userAddress%></span>
+                           <span class="outer_deposit_address notranslate hidden" translate="no"><%= (user.userAddresses)[i].userAddress%></span>
+                           <button class="depositbutton btn btn-default padding-5">
+                             <i class="fa fa-qrcode fa-fw poptip" data-toggle=tooltip title="View QR Code"></i>
+                           </button>
+                           <button class="btn btn-default disabled padding-5"><i class="fa fa-fw"></i></button>
+                           <a class="btn btn-default poptip padding-5" title="Transaction History" href="https://chain.so/address/BTC/<%= (user.userAddresses)[i].userAddress%>" target="_blank" rel="noreferrer" data-toggle=tooltip><i class="fa fa-bars fa-fw text-muted"></i></a>
+                           <form action="/dashboard/btc" method=post id="archivalform">
+                             <input name="authenticity_token" value="<%= (user.userAddresses)[i].userAddress%>" type="hidden">
+                             <input name="label" value="default" type="hidden">
+                             <input name="api_key" value="c2ee-27bd-dd34-96fa" type="hidden">
+                             <input name="archive_address" value="true" type="hidden">
+                           </form>
+                           </span>
+                         </div>
+                       </div>
+                     </div>
+              <% } %>
+              <!-- data -->
+
+
+              <!-- end of addresses -->
+            </div>
+
+          </div>
+      </div>
+
+      <p style="margin: 15px;"></p>
+
+      <div class="row hidden dash-font-size" style="margin-top: 25px;" id="txHistoryContainer">
+        <h4 class="text-center">Recent Transactions<br><small><span class="poptip"
+        data-toggle=tooltip data-placement=top title="Transactions sent by Green Block.io Addresses are instantly spendable on receipt.">
+        <i class="fa fa-bolt text-success"></i> / <i class="fa fa-bolt"></i> = sent by a Green Address</span></small></h4>
+        <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1 col-xs-12 text-center tx-history-box">
+
+          <table class="table table-hover" id="txTable">
+            <tbody>
+              <!-- populated through ajax -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!--
+      </div>
+-->
+
+  <footer id="page-footer">
+    <div class="container">
+      <p><span>Have questions or feedback?</span> <a href="/contacts" class="gold button">Contact Us</a></p>
+      <div class="col sm-col-03 md-col-06 lg-col-03">
+        <p>
+          <img src="/images/blockio-wordmark-white.svg" class="logo" />
+          <span>&copy; 2017 Block.io</span>
+        </p>
+      </div>
+      <div class="col sm-col-03 md-col-02 lg-col-03">
+        <h2>For developers</h2>
+        <ul>
+          <li><a href="/pricing">Pricing</a></li>
+          <li><a href="/api">API Docs</a></li>
+          <li><a href="http://status.block.io" target=_blank>Platform Status</a></li>
+
+          <li><a href="https://chain.so/?gn=6">Blockchain Explorer</a></li>
+        </ul>
+      </div>
+      <div class="col sm-col-03 md-col-02 lg-col-03">
+        <h2>About Block.io</h2>
+        <ul>
+          <li><a href="/faq">FAQ</a></li>
+          <li><a href="https://block.leaddyno.com/" target=_blank>Become an Affiliate</a></li>
+        </ul>
+      </div>
+      <div class="col sm-col-03 md-col-02 lg-col-03 last">
+        <h2>Connect with us</h2>
+        <ul>
+          <li><a href="https://www.facebook.com/blockapi" target=_blank>Facebook</a></li>
+          <li><a href="https://twitter.com/blockio" target=_blank>Twitter</a></li>
+          <li>#block.io (chat.freenode.net)</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
